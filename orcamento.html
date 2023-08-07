@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Exemplo de inputmask.mask()</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
+
+<meta name="Autor" content="Sr. Lord">
+<meta charset="UTF-8">
+
+<title> Pedido de Orçamento </title>
+<link REL="STYLESHEET" type="text/css" href="css/estilo.css">
+
+
+</head>
+
+<body>
+    <h1>Exemplo de inputmask.mask()</h1>
+<img src="logo ODRASONS.jpg" width="200px;" ri >
+<h1>Pedido de Orçamento</h1>
+<hr>
+<p> Preencher dados:</p>
+
+<!--fildeset - cria um campo com uma linha legends ficara entre o campo-->
+<fieldset><legend>Informações:</legend>
+<form method="post" action="cadastro_aluno.php">
+
+<label for="aluno">Nome:</label>
+<input type="text" id="aluno" name="aluno" style="width: 310px;"><br>
+
+<label for="data">Data de Nascimento:</label>
+<input type="date" id="data" name="data"><br>
+
+<label for="cpf">CPF:</label>
+<input type="text" id="cpf" name="cpf"><br>
+
+<button onclick="validarnumero()">Validar</button>
+
+<script>
+    // Aplicar a máscara de CPF no campo de entrada
+    Inputmask().mask(document.getElementById("cpf"), "999.999.999-99");
+</script>
+
+<label for="endereco">Endereço:</label>
+<input type="text" id="endereco" name="endereco" style="width:300px;"><br>
+
+<label for="complemento">Complemento</label>
+<input type="text" id="complemento" name="complemento" style="width: 263px;"><br>
+
+<label for="cep">CEP:</label>
+<input type="text" id="cep" name="cep">
+
+<label for="bairro">Bairro:</label>
+<input type="text" id="bairro" name="bairro" style="width: ;"><br>
+
+<label for="cidade">Cidade:</label>
+<input type="text" id="cidade" name="cidade"><br>
+
+<label for="estado">Estado:</label>
+<input type="text" id="estado" name="estado"><br>
+
+<label for="estado">Estado:</label>
+<select>
+<option value="">Selecione o estado:</option>
+<option value="ama">Amazonas</option>
+<option value="ala">Alagoas</option>
+<option value="ap">Amapá</option>
+<option value="ba">Bahia</option>
+<option value="ce">Ceará</option>
+<option value="dis">Distrito Federal</option>
+<option value="es">Espírito Santo</option>
+<option value="go">Goiás</option>
+<option value="ma">Maranhão</option>
+<option value="min">Minas Gerais</option>
+<option value="natal">Natal</option>
+
+<label for="telefone">Telefone</label>
+<input type="text" id="telefone" name=telefone style="width: 300px;"><br>
+
+<input type="reset" value="Limpar" name="Limpar">
+<input type="submit" value="Enviar" name="enviar">
+</select>
+
+</form>
+</fieldset>
